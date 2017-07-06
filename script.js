@@ -1,17 +1,20 @@
 function isBigger(a, b) {
     return (a > b);
 }
+
 console.log( isBigger(5, -1) );
 
 function isSmaller(a, b) {
     return (a < b);
 }
+
 console.log( isSmaller(5, -1) );
 
 function getMin() {
     var min = arguments[0];
-
-    for (var i = 0; i < arguments.length; i++) {
+    var i;
+	
+    for (i = 0; i < arguments.length; i++) {
         if (min > arguments[i]) {
             min = arguments[i];
         }
@@ -19,6 +22,7 @@ function getMin() {
 
     return min;
 }
+
 console.log( getMin(3, 0, -3) );
 
 function pow(x, n) {
@@ -27,12 +31,14 @@ function pow(x, n) {
 
     return result;
 }
+
 console.log( pow(2, 3) );
 
 function getClosestToZero() {
     var toZero = arguments[0];
-
-    for (var i = 0; i < arguments.length; i++) {
+    var i;
+	
+    for (i = 0; i < arguments.length; i++) {
         if (toZero > Math.abs(arguments[i])) {
             toZero = arguments[i];
         }
@@ -40,4 +46,5 @@ function getClosestToZero() {
 
     return toZero;
 }
+
 console.log( getClosestToZero(9, 5, -4, -9) );
